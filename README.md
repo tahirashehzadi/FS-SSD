@@ -102,12 +102,4 @@ bash train.sh
 ### Acknowledgment
 Code is built on [mmdet](https://mmdetection.readthedocs.io/en/latest/get_started.html).
 
-### Citation
-````
-@article{elbatel2024fd,
-  title={FD-SOS: Vision-Language Open-Set Detectors for Bone Fenestration and Dehiscence Detection from Intraoral Images},
-  author={Elbatel, Marawan and Liu, Keyuan and Yang, Yanqi and Li, Xiaomeng},
-  journal={arXiv preprint arXiv:2407.09088},
-  year={2024}
-}
-````
+
