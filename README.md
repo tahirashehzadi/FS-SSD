@@ -1,7 +1,7 @@
 # FD-SSD
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/mindgarage-shan/transformer_object_detection_survey/graphs/commit-activity)
-[![GitHub issues](https://img.shields.io/github/issues/tahirashehzadi/FS-SSD))](https://github.com/tahirashehzadi/FS-SSD/issues)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Paper](https://img.shields.io/badge/Paper-Read-blue)](https://example.com/your-paper-link)
+[![GitHub issues](https://img.shields.io/github/issues/tahirashehzadi/FS-SSD)](https://github.com/tahirashehzadi/FS-SSD/issues)
+[![GitHub license](https://img.shields.io/github/license/tahirashehzadi/FS-SSD)](https://github.com/tahirashehzadi/FS-SSD/blob/main/LICENSE)
 <div style="text-align: center;">
     <img src="main_new.jpg" alt="warmup.png" width="900"/>
 </div>
