@@ -56,9 +56,9 @@ Download the [FDTOOTH]( https://drive.google.com/uc?id=1Xm794_tzCh1TtIfJYJLFlmv0
 /FDTOOTH/data/v1/
     ├── images_all/
     └── annotations/
-  	    ├── 90_FD_train.json
-        ├── 40_FD_test.json
-  	    └── 20_FD_val.json
+    ├── 90_FD_train.json
+    ├── 40_FD_test.json
+    └── 20_FD_val.json
   ```
 
 
