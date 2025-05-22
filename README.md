@@ -96,7 +96,7 @@ We provide detailed results and models trained by us bellow:
 ### Results
 | Label (%) | mAP  | AP50 | AP75 | APFD | F1   | Pth files |
 |-----------|------|------|------|------|------|-----------|
-| 5%        | 40.5 | 44.8 | 43.2 | 42.5 | 0.53 |[CKPT](https://drive.google.com/drive/folders/1dnZ010Yo-Xix1Pd56beTPaIfopSpUfVb?usp=drive_link) |
+| 5%        | 40.5 | 44.8 | 43.2 | 42.5 | 0.53 |[CKPT](https://drive.google.com/file/d/1QX-ArM5jBZNHRuatoC3M5ub71uVoCQ3-/view?usp=drive_link) |
 | 10%       | 49.9 | 55.6 | 52.2 | 45.7 | 0.64 |[CKPT](https://drive.google.com/file/d/1k9v2kVAAGK7br08-4JiBcHPhU__ONUKT/view?usp=drive_link) |
 | 50%       | 55.0 | 59.7 | 56.5 | 50.3 | 0.69 |[CKPT](https://drive.google.com/file/d/1i_kh644t9m4zvHL79RUwsbIhP9RckUY3/view?usp=drive_link) |
 
