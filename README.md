@@ -1,7 +1,7 @@
 # FD-SSD
 [![Paper](https://img.shields.io/badge/Paper-Read-blue)](https://example.com/your-paper-link)
-[![GitHub issues](https://img.shields.io/github/issues/tahirashehzadi/FS-SSD)](https://github.com/tahirashehzadi/FS-SSD/issues)
-[![GitHub license](https://img.shields.io/github/license/tahirashehzadi/FS-SSD)](https://github.com/tahirashehzadi/FS-SSD/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/tahirashehzadi/FD-SSD)](https://github.com/tahirashehzadi/FS-SSD/issues)
+[![GitHub license](https://img.shields.io/github/license/tahirashehzadi/FD-SSD)](https://github.com/tahirashehzadi/FS-SSD/blob/main/LICENSE)
 <div style="text-align: center;">
     <img src="main_new.jpg" alt="warmup.png" width="900"/>
 </div>
@@ -51,14 +51,14 @@
   ```
 
 ### Data Preparation
-Download the [PubLaynet](https://developer.ibm.com/exchanges/data/all/publaynet/) dataset.
+Download the [FDTOOTH]( https://drive.google.com/uc?id=1Xm794_tzCh1TtIfJYJLFlmv013GTL_Uh) dataset.
   ```sh
-/publaynet/coco
-    ├── train2017/
-    ├── val2017/
+/FDTOOTH/data/v1/
+    ├── images_all/
     └── annotations/
-  	   ├── instances_train2017.json
-  	   └── instances_val2017.json
+  	   ├── 90_FD_train.json
+       ├── 40_FD_test.json
+  	   └── 20_FD_val.json.json
   ```
 
 
@@ -68,17 +68,17 @@ Download the [PubLaynet](https://developer.ibm.com/exchanges/data/all/publaynet/
     ```sh
     sh tools/dist_train_detr_od.sh dino_detr ${GPUS}
     ```
-- As an example, to train the model in a fully supervised setting with 1 GPUs, you would use the following command:
+- As an example, to train the model in a fully supervised setting with 2 GPUs, you would use the following command:
     ```sh
-    sh tools/dist_train_detr_od.sh dino_detr 1
+    sh tools/dist_train_detr_od.sh dino_detr 2
     ```
 - To train the model with semi-supervised data:
     ```sh
     sh tools/dist_train_detr_ssod.sh dino_detr_ssod ${FOLD} ${PERCENT} ${GPUS}
     ```
-- For instance, you can execute the following script to train our model using 30% labeled data with 2 GPUs on the first split:
+- For instance, you can execute the following script to train our model using 10% labeled data with 2 GPUs on the first split:
     ```sh
-    sh tools/dist_train_detr_ssod.sh dino_detr_ssod 1 30 2
+    sh tools/dist_train_detr_ssod.sh dino_detr_ssod 1 10 2
     ```
 ### Evaluation
 - To evaluate the model: 
@@ -98,19 +98,25 @@ We provide detailed results and models trained by us bellow:
 
 We provide detailed results and model weights for reproducibility and further research.
 
-| Methods                       | Multi-task | AP75FD    | APFD      | AP50FD    | AP75      | AP        | AP50      | Model Weights |
-|-------------------------------|------------|-----------|-----------|-----------|-----------|-----------|-----------|--------------|
-| **Traditional Detectors***    |            |           |           |           |           |           |           |              |
-| Diffusion-DETR w/o pretraining | ✗          | 0.04      | 1.31      | 7.58      | 0.04      | 1.7       | 8.85      | [Download](https://drive.google.com/drive/folders/1l9EsF5x8QTV3x0QT6yKeBpAAkR8fIiqH?usp=drive_link) |
-| Diffusion-DETR                | ✗          | 55.52     | 51.42     | 61.28     | 62.58     | 59.06     | 66.37     | [Download](https://drive.google.com/drive/folders/1wtbbvAHTwpmRHfyMjc2xuYbBAqvHrY7L?usp=drive_link) |
-| DDETR                         | ✗          | 56.92     | 50.41     | 60.51     | 62.68     | 57.44     | 65.48     | [Download](https://drive.google.com/drive/folders/1lWdPoUGe5HQvq5eU4SPCPnXLCf47pqwD?usp=drive_link) |
-| DINO                          | ✗          | 54.03     | 49.68     | 57.94     | 55.13     | 51.65     | 57.65     | [Download](https://drive.google.com/drive/folders/1yuxNT8OQefXn7fmcY6P7yvWgNY5pPRz3?usp=drive_link) |
-| **Open-Set Detectors †**      |            |           |           |           |           |           |           |              |
-| GLIP                          | ✗          | 40.57     | 32.0      | 46.34     | 51.3      | 40.47     | 55.85     | [Download](https://drive.google.com/drive/folders/1sqnFCCi9mWEBcGhUw1flZUwCz8Y70efO?usp=drive_link) |
-| GDINO                         | ✗          | 58.32     | 56.59     | 61.07     | 63.69     | 62.59     | 65.89     | [Download](https://drive.google.com/drive/folders/1dnZ010Yo-Xix1Pd56beTPaIfopSpUfVb?usp=drive_link) |
-| GLIP                          | ✔️         | 41.78     | 33.68     | 47.09     | 51.97     | 42.73     | 56.7      | [Download](https://drive.google.com/drive/folders/1cZWXUyxbvhJhiikW8srecyOyhMYAmEOA?usp=sharing) |
-| GDINO (our baseline)          | ✔️         | 55.55     | 54.75     | 59.99     | 62.6      | 62.08     | 65.81     | [Download](https://drive.google.com/drive/folders/1wiwm1j90HTiriB5UX4gwFRN4_In679FL?usp=sharing) |
-| **FD-SOS (ours)**             | ✔️         | **62.45** | **60.84** | **66.01** | **67.07** | **65.97** | **69.67** | [Download](https://drive.google.com/drive/folders/1tY1yDnCE3AA7crXGiHNBN5fGb-zi4XVN?usp=drive_link) |
+| Method                           | Multi-task | Approach         | APFD  | mAP   | AP50  | AP75  |
+|----------------------------------|------------|------------------|-------|-------|-------|-------|
+| **Object Detectors⋆**           |            |                  |       |       |       |       |
+| Diffusion-DETR w/o pretraining  | ✗        | Supervised       | 1.31  | 1.7   | 8.85  | 0.04  |
+| Diffusion-DETR                  | ✗          | Supervised       | 51.42 | 59.06 | 66.37 | 62.58 |
+| DDETR                           | ✗          | Supervised       | 50.41 | 57.44 | 65.48 | 62.68 |
+| DINO                            | ✗          | Supervised       | 49.68 | 51.65 | 57.65 | 55.13 |
+| Hierarchical-Diff-DetR w/o pretraining  | ✓  | Supervised | 0.00  | 0.00  | 0.00  | 0.00  |
+| Hierarchical-Diff-DetR          | ✓          | Supervised       | 50.82 | 57.63 | 64.40 | 61.45 |
+| DDETR                           | ✓          | Supervised       | 47.57 | 54.89 | 63.05 | 60.20 |
+| DINO                            | ✓          | Supervised       | 43.85 | 50.15 | 55.53 | 53.80 |
+| SparseDet                       | ✓          | Supervised       | 52.94 | 54.87 | 65.13 | 62.96 |
+| **Open-set Object Detectors†**  |            |                  |       |       |       |       |
+| GLIP                            | ✗          | Supervised       | 32.00 | 40.47 | 55.85 | 51.30 |
+| GDINO                           | ✗          | Supervised       | 56.59 | 62.59 | 65.89 | 63.69 |
+| GLIP                            | ✓          | Supervised       | 38.68 | 42.73 | 51.97 | 56.70 |
+| GDINO                           | ✓          | Supervised       | 54.75 | 62.08 | 65.81 | 62.60 |
+| FD-SOS                          | ✓          | Supervised       | 60.84 | 65.97 | 69.67 | 67.07 |
+| **FD-SSD (Ours)**               | ✓          | Semi-Supervised  | **64.5** | **68.3** | **73.2** | **70.7** |
 
 #### *requires pre-training on public dental dataset after initialization from ImageNet pre-trained weights.
 #### † refers to fine-tuning existing VLM pre-trained models.
