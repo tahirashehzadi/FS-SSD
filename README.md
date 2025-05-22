@@ -1,4 +1,4 @@
-# FS-SSD
+# FD-SSD
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/mindgarage-shan/transformer_object_detection_survey/graphs/commit-activity)
 [![GitHub issues](https://img.shields.io/github/issues/tahirashehzadi/FS-SSD))](https://github.com/tahirashehzadi/FS-SSD/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
