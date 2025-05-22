@@ -3,7 +3,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/mindgarage-shan/transformer_object_detection_survey)](https://gitHub.com/mindgarage-shan/transformer_object_detection_survey/issues/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 <div style="text-align: center;">
-    <img src="resources/main_image.jpg" alt="warmup.png" width="900"/>
+    <img src="resources/main_new.jpg" alt="warmup.png" width="900"/>
 </div>
 ## Getting Started
 
