@@ -46,8 +46,8 @@
          
 6.This process will install mmdet, detr_od, and detr_ssod in the environment. Additionally, you need to compile the CUDA operations required for deformable attention:
   ```sh
-   cd detr_od/models/utils/ops
-   python setup.py build install
+    cd detr_od/models/utils/ops
+    python setup.py build install
   ```
 
 ### Data Preparation
