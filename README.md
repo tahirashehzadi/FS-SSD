@@ -17,7 +17,7 @@
 ### Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/tahirashehzadi/DocSemi.git
+    git clone https://github.com/tahirashehzadi/FD-SSD.git
     cd DocSemi
     ```
 
