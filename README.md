@@ -89,7 +89,7 @@ Download the [FDTOOTH]( https://drive.google.com/uc?id=1Xm794_tzCh1TtIfJYJLFlmv0
 - For example, to evaluate the model in a semi-supervised setting: 
     ```sh
     python tools/test.py configs/detr_ssod/detr_ssod_dino_detr_r50_coco_120k.py \
-    work_dirs_fan_table_Publaynet_Table_10/detr_ssod_dino_detr_r50_coco_120k/10/1/epoch_12.pth --eval bbox
+    work_dirs_fdtooth/detr_ssod_dino_detr_r50_coco_120k/10/1/epoch_4000.pth --eval bbox
     ```
 We provide detailed results and models trained by us bellow:
 
