@@ -18,13 +18,13 @@
 1. Clone the repository:
     ```sh
     git clone https://github.com/tahirashehzadi/FD-SSD.git
-    cd DocSemi
+    cd FD-SSD
     ```
 
 2. Create a virtual environment:
     ```sh
-    conda create -n docsemi python=3.8
-    conda activate docsemi
+    conda create -n FD-SSD python=3.8
+    conda activate FD-SSD
 
      ```
 
@@ -50,35 +50,48 @@
    python setup.py build install
   ```
 
-### Download Data, Models, and Configs
+### Data Preparation
+Download the [PubLaynet](https://developer.ibm.com/exchanges/data/all/publaynet/) dataset.
+  ```sh
+/publaynet/coco
+    ├── train2017/
+    ├── val2017/
+    └── annotations/
+  	   ├── instances_train2017.json
+  	   └── instances_val2017.json
+  ```
 
-5. Download the images:
+
+### Training
+
+- To train the model in a fully supervised setting:
     ```sh
-    #download images
-    gdown https://drive.google.com/uc?id=1Xm794_tzCh1TtIfJYJLFlmv013GTL_Uh
-    unzip images_all.zip -d data/v1/
-   ```
-6. Download the model weights, and configs
-   ```sh
-    #download model weights
-    gdown --folder https://drive.google.com/drive/folders/1zgNxQEXhGm3FTIQAKqkYd3YH0O5SHhm_
+    sh tools/dist_train_detr_od.sh dino_detr ${GPUS}
     ```
-
-
-## Generating Predictions and Evaluation
-
-To generate predictions using the trained model/weights, make sure to download the images, model weights, and configs:
-
-
-1. Run inference:
+- As an example, to train the model in a fully supervised setting with 1 GPUs, you would use the following command:
     ```sh
-    python inference.py
+    sh tools/dist_train_detr_od.sh dino_detr 1
     ```
-
-2. The model will infer into the evaluation folder. To evaluate COCO Metrics on the generated predictions:
+- To train the model with semi-supervised data:
     ```sh
-    python evaluate.py
+    sh tools/dist_train_detr_ssod.sh dino_detr_ssod ${FOLD} ${PERCENT} ${GPUS}
     ```
+- For instance, you can execute the following script to train our model using 30% labeled data with 2 GPUs on the first split:
+    ```sh
+    sh tools/dist_train_detr_ssod.sh dino_detr_ssod 1 30 2
+    ```
+### Evaluation
+- To evaluate the model: 
+    ```sh
+    python tools/test.py <CONFIG_FILE_PATH> <CHECKPOINT_PATH> --eval bbox
+    ```  
+
+- For example, to evaluate the model in a semi-supervised setting: 
+    ```sh
+    python tools/test.py configs/detr_ssod/detr_ssod_dino_detr_r50_coco_120k.py \
+    work_dirs_fan_table_Publaynet_Table_10/detr_ssod_dino_detr_r50_coco_120k/10/1/epoch_12.pth --eval bbox
+    ```
+We provide detailed results and models trained by us bellow:
 
 ### Results and Models
 
