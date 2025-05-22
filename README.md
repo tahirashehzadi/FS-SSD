@@ -1,9 +1,9 @@
 # FS-SSD
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/mindgarage-shan/transformer_object_detection_survey/graphs/commit-activity)
-[![GitHub issues](https://img.shields.io/github/issues/mindgarage-shan/transformer_object_detection_survey)](https://gitHub.com/mindgarage-shan/transformer_object_detection_survey/issues/)
+[![GitHub issues][(https://github.com/tahirashehzadi/FS-SSD/)](https://github.com/tahirashehzadi/FS-SSD/issues)](https://github.com/tahirashehzadi/FS-SSD/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 <div style="text-align: center;">
-    <img src="resources/main_new.jpg" alt="warmup.png" width="900"/>
+    <img src="main_new.jpg" alt="warmup.png" width="900"/>
 </div>
 ## Getting Started
 
