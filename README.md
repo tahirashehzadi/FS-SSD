@@ -121,25 +121,7 @@ We provide detailed results and model weights for reproducibility and further re
 #### *requires pre-training on public dental dataset after initialization from ImageNet pre-trained weights.
 #### † refers to fine-tuning existing VLM pre-trained models.
 
-Traditional object detectors fail without warmup on public dental datasets. We provide warmup models for traditional object detectors available [here]().
 
-<div style="text-align: center;">
-    <img src="graphs/warmup.png" alt="warmup.png" width="300"/>
-</div>
-
-## Training FD-SOS
-
-To train FD-SOS , please follow the instructions to [get started](#getting-started
-) and install dependencies.
-
-
-
-All configs for all experiments are available in [train_FD.sh](train_FD.sh).
-
-To run FD-SOS benchmark, make sure all images are available in [data/v1/images_all](data/v1/images_all) and run:
-```
-bash train.sh
-```
 
 ### Acknowledgment
 Code is built on [mmdet](https://mmdetection.readthedocs.io/en/latest/get_started.html).
