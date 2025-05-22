@@ -93,7 +93,12 @@ Download the [FDTOOTH]( https://drive.google.com/uc?id=1Xm794_tzCh1TtIfJYJLFlmv0
     ```
 We provide detailed results and models trained by us bellow:
 
-### Results and Models
+### Results
+| Label (%) | mAP  | AP50 | AP75 | APFD | F1   | Pth files |
+|-----------|------|------|------|------|------|-----------|
+| 5%        | 40.5 | 44.8 | 43.2 | 42.5 | 0.53 |[CKPT](https://drive.google.com/drive/folders/1dnZ010Yo-Xix1Pd56beTPaIfopSpUfVb?usp=drive_link) |
+| 10%       | 49.9 | 55.6 | 52.2 | 45.7 | 0.64 |[CKPT](https://drive.google.com/drive/folders/1dnZ010Yo-Xix1Pd56beTPaIfopSpUfVb?usp=drive_link) |
+| 50%       | 55.0 | 59.7 | 56.5 | 50.3 | 0.69 |[CKPT](https://drive.google.com/drive/folders/1dnZ010Yo-Xix1Pd56beTPaIfopSpUfVb?usp=drive_link) |
 
 
 We provide detailed results and model weights for reproducibility and further research.
@@ -120,10 +125,14 @@ We provide detailed results and model weights for reproducibility and further re
 
 #### *requires pre-training on public dental dataset after initialization from ImageNet pre-trained weights.
 #### † refers to fine-tuning existing VLM pre-trained models.
+### Example
 
+<p align="center">
+  <img src="demo/image1.jpg" alt="Image 1" width="45%" />
+  <img src="demo/image2.jpg" alt="Image 2" width="45%" />
+</p>
 
 
 ### Acknowledgment
-Code is built on [mmdet](https://mmdetection.readthedocs.io/en/latest/get_started.html).
 
 
