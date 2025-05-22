@@ -5,30 +5,50 @@
 <div style="text-align: center;">
     <img src="main_new.jpg" alt="warmup.png" width="900"/>
 </div>
-## Getting Started
 
+## Getting Started
+### Table of Content
+- [Installation](#installation)
+- [Data Preparation](#data-preparation)
+- [Training](#training)
+- [Evaluation](#evaluation)
+- [Results](#results)
+- [Example](#example)
 ### Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/xmed-lab/FD-SOS
-    cd FD-SOS
+    git clone https://github.com/tahirashehzadi/DocSemi.git
+    cd DocSemi
     ```
 
 2. Create a virtual environment:
     ```sh
-    conda create -n SOS python=3.8
-    conda activate SOS
-    ```
+    conda create -n docsemi python=3.8
+    conda activate docsemi
 
-3. Install [PyTorch](https://pytorch.org/get-started/locally/):
-    ```sh
-    pip3 install torch==2.1.2+cu118 torchvision==0.16.2+cu118 torchaudio==2.1.2+cu118 --index-url https://download.pytorch.org/whl/cu118
-    ```
+     ```
 
-4. Follow [mmdet](https://mmdetection.readthedocs.io/en/latest/get_started.html) to install dependencies :
+3. Install PyTorch:
     ```sh
-   bash requirements.sh
+    conda install pytorch==1.9.0 torchvision==0.10.0 torchtext==0.10.0 cudatoolkit=10.2 -c pytorch
     ```
+    
+4. Please install mmdet in editable mode first:
+     ```sh
+    cd thirdparty/mmdetection && python -m pip install -e .
+     ```
+        
+4. Building on mmdetection, we have developed a detection transformer module (detr_od) and a semi-supervised module (detr_ssod) in a similar manner. 
+  These modules need to be installed first. Ensure you update the module names (detr_od and detr_ssod) in the setup.py file if necessary.
+     ```sh
+    cd ../../ && python -m pip install -e  .
+     ```
+         
+6.This process will install mmdet, detr_od, and detr_ssod in the environment. Additionally, you need to compile the CUDA operations required for deformable attention:
+  ```sh
+   cd detr_od/models/utils/ops
+   python setup.py build install
+  ```
 
 ### Download Data, Models, and Configs
 
