@@ -3,7 +3,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/tahirashehzadi/FD-SSD)](https://github.com/tahirashehzadi/FS-SSD/issues)
 [![GitHub license](https://img.shields.io/github/license/tahirashehzadi/FD-SSD)](https://github.com/tahirashehzadi/FS-SSD/blob/main/LICENSE)
 <div style="text-align: center;">
-    <img src="main_new.jpg" alt="warmup.png" width="900"/>
+    <img src="resources/main_new.jpg" alt="warmup.png" width="900"/>
 </div>
 
 ## Getting Started
