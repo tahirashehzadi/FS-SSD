@@ -128,8 +128,8 @@ We provide detailed results and model weights for reproducibility and further re
 ### Example
 
 <p align="center">
-  <img src="demo/visual.jpg" alt="Image 1" width="45%" />
-  <img src="demo/visual2.jpg" alt="Image 2" width="45%" />
+  <img src="demo/visual.png" alt="Image 1" width="45%" />
+  <img src="demo/visual2.png" alt="Image 2" width="45%" />
 </p>
 
 
