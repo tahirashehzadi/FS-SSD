@@ -93,7 +93,7 @@ Download the [FDTOOTH]( https://drive.google.com/uc?id=1Xm794_tzCh1TtIfJYJLFlmv0
     python tools/test.py configs/detr_ssod/detr_ssod_dino_detr_r50_coco_120k.py \
     work_dirs_fdtooth/detr_ssod_dino_detr_r50_coco_120k/10/1/epoch_4000.pth --eval bbox
     ```
-We provide detailed results and models trained by us bellow:
+We provide detailed results on FDTOOTH dataset and models trained by us bellow:
 
 ### Results
 | Label (%) | mAP  | AP50 | AP75 | APFD | F1   | Pth files |
